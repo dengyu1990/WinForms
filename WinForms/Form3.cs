@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace WinForms
 {
-    public partial class Form1 : Form
+    public partial class Form3 : Form
     {
-        public Form1()
+        public Form3()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 frm2 = new Form2();
-            frm2.ShowDialog();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            Test._frm1 = this;
+            //Application.Exit();
+            Test._frm1.Close();
         }
     }
 }
