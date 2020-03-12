@@ -19,13 +19,30 @@ namespace WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 frm2 = new Form2();
-            frm2.ShowDialog();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             Test._frm1 = this;
+        }
+
+        private void 打开新窗口ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void 打开新窗口ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form frm = new Form();
+            frm.MdiParent = this;
+            frm.Show();
+
+
+        }
+
+        private void 横向排列ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileHorizontal);
         }
     }
 }
