@@ -28,101 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.打开新窗体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.打开新窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.打开新窗口ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.横向排列ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1.SuspendLayout();
-            this.contextMenuStrip2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // contextMenuStrip1
+            // pictureBox1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.打开新窗体ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(137, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(962, 575);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // 打开新窗体ToolStripMenuItem
+            // btnPrevious
             // 
-            this.打开新窗体ToolStripMenuItem.Name = "打开新窗体ToolStripMenuItem";
-            this.打开新窗体ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.打开新窗体ToolStripMenuItem.Text = "打开新窗体";
+            this.btnPrevious.Location = new System.Drawing.Point(221, 603);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(135, 52);
+            this.btnPrevious.TabIndex = 1;
+            this.btnPrevious.Text = "上一张";
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
-            // contextMenuStrip2
+            // btnNext
             // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.打开新窗口ToolStripMenuItem});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(137, 26);
-            // 
-            // 打开新窗口ToolStripMenuItem
-            // 
-            this.打开新窗口ToolStripMenuItem.Name = "打开新窗口ToolStripMenuItem";
-            this.打开新窗口ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.打开新窗口ToolStripMenuItem.Text = "打开新窗口";
-            this.打开新窗口ToolStripMenuItem.Click += new System.EventHandler(this.打开新窗口ToolStripMenuItem_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.打开新窗口ToolStripMenuItem1,
-            this.横向排列ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 打开新窗口ToolStripMenuItem1
-            // 
-            this.打开新窗口ToolStripMenuItem1.Name = "打开新窗口ToolStripMenuItem1";
-            this.打开新窗口ToolStripMenuItem1.Size = new System.Drawing.Size(80, 21);
-            this.打开新窗口ToolStripMenuItem1.Text = "打开新窗口";
-            this.打开新窗口ToolStripMenuItem1.Click += new System.EventHandler(this.打开新窗口ToolStripMenuItem1_Click);
-            // 
-            // 横向排列ToolStripMenuItem
-            // 
-            this.横向排列ToolStripMenuItem.Name = "横向排列ToolStripMenuItem";
-            this.横向排列ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.横向排列ToolStripMenuItem.Text = "横向排列";
-            this.横向排列ToolStripMenuItem.Click += new System.EventHandler(this.横向排列ToolStripMenuItem_Click);
+            this.btnNext.Location = new System.Drawing.Point(595, 603);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(130, 52);
+            this.btnNext.TabIndex = 2;
+            this.btnNext.Text = "下一张";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(968, 667);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPrevious);
+            this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.contextMenuStrip2.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 打开新窗体ToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem 打开新窗口ToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 打开新窗口ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem 横向排列ToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnNext;
     }
 }
 
