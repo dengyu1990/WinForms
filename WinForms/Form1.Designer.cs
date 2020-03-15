@@ -28,73 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboYear = new System.Windows.Forms.ComboBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.cboMonth = new System.Windows.Forms.ComboBox();
-            this.cboDay = new System.Windows.Forms.ComboBox();
+            this.lstPic = new System.Windows.Forms.ListBox();
+            this.picbDisplay = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picbDisplay)).BeginInit();
             this.SuspendLayout();
             // 
-            // cboYear
+            // lstPic
             // 
-            this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboYear.FormattingEnabled = true;
-            this.cboYear.Location = new System.Drawing.Point(58, 121);
-            this.cboYear.Name = "cboYear";
-            this.cboYear.Size = new System.Drawing.Size(112, 20);
-            this.cboYear.TabIndex = 0;
-            this.cboYear.SelectedIndexChanged += new System.EventHandler(this.cboYear_SelectedIndexChanged);
+            this.lstPic.FormattingEnabled = true;
+            this.lstPic.ItemHeight = 12;
+            this.lstPic.Location = new System.Drawing.Point(12, 12);
+            this.lstPic.Name = "lstPic";
+            this.lstPic.Size = new System.Drawing.Size(252, 472);
+            this.lstPic.TabIndex = 0;
+            this.lstPic.SelectedIndexChanged += new System.EventHandler(this.lstPic_SelectedIndexChanged);
             // 
-            // btnAdd
+            // picbDisplay
             // 
-            this.btnAdd.Location = new System.Drawing.Point(253, 227);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "新增";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // cboMonth
-            // 
-            this.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMonth.FormattingEnabled = true;
-            this.cboMonth.Location = new System.Drawing.Point(216, 121);
-            this.cboMonth.Name = "cboMonth";
-            this.cboMonth.Size = new System.Drawing.Size(112, 20);
-            this.cboMonth.TabIndex = 2;
-            this.cboMonth.SelectedIndexChanged += new System.EventHandler(this.cboMonth_SelectedIndexChanged);
-            // 
-            // cboDay
-            // 
-            this.cboDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDay.FormattingEnabled = true;
-            this.cboDay.Location = new System.Drawing.Point(376, 121);
-            this.cboDay.Name = "cboDay";
-            this.cboDay.Size = new System.Drawing.Size(112, 20);
-            this.cboDay.TabIndex = 3;
+            this.picbDisplay.Location = new System.Drawing.Point(281, 12);
+            this.picbDisplay.Name = "picbDisplay";
+            this.picbDisplay.Size = new System.Drawing.Size(639, 472);
+            this.picbDisplay.TabIndex = 1;
+            this.picbDisplay.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 635);
-            this.Controls.Add(this.cboDay);
-            this.Controls.Add(this.cboMonth);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.cboYear);
+            this.ClientSize = new System.Drawing.Size(934, 501);
+            this.Controls.Add(this.picbDisplay);
+            this.Controls.Add(this.lstPic);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picbDisplay)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cboYear;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.ComboBox cboMonth;
-        private System.Windows.Forms.ComboBox cboDay;
+        private System.Windows.Forms.ListBox lstPic;
+        private System.Windows.Forms.PictureBox picbDisplay;
     }
 }
 
