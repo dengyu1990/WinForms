@@ -28,58 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.wbrower = new System.Windows.Forms.WebBrowser();
-            this.txtURL = new System.Windows.Forms.TextBox();
-            this.btnAccess = new System.Windows.Forms.Button();
+            this.cboYear = new System.Windows.Forms.ComboBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.cboMonth = new System.Windows.Forms.ComboBox();
+            this.cboDay = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // wbrower
+            // cboYear
             // 
-            this.wbrower.Location = new System.Drawing.Point(12, 48);
-            this.wbrower.MinimumSize = new System.Drawing.Size(20, 20);
-            this.wbrower.Name = "wbrower";
-            this.wbrower.Size = new System.Drawing.Size(926, 575);
-            this.wbrower.TabIndex = 0;
+            this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboYear.FormattingEnabled = true;
+            this.cboYear.Location = new System.Drawing.Point(58, 121);
+            this.cboYear.Name = "cboYear";
+            this.cboYear.Size = new System.Drawing.Size(112, 20);
+            this.cboYear.TabIndex = 0;
+            this.cboYear.SelectedIndexChanged += new System.EventHandler(this.cboYear_SelectedIndexChanged);
             // 
-            // txtURL
+            // btnAdd
             // 
-            this.txtURL.Location = new System.Drawing.Point(13, 13);
-            this.txtURL.Name = "txtURL";
-            this.txtURL.Size = new System.Drawing.Size(833, 21);
-            this.txtURL.TabIndex = 1;
+            this.btnAdd.Location = new System.Drawing.Point(253, 227);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "新增";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // btnAccess
+            // cboMonth
             // 
-            this.btnAccess.Location = new System.Drawing.Point(852, 12);
-            this.btnAccess.Name = "btnAccess";
-            this.btnAccess.Size = new System.Drawing.Size(75, 23);
-            this.btnAccess.TabIndex = 2;
-            this.btnAccess.Text = "访问";
-            this.btnAccess.UseVisualStyleBackColor = true;
-            this.btnAccess.Click += new System.EventHandler(this.btnAccess_Click);
+            this.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMonth.FormattingEnabled = true;
+            this.cboMonth.Location = new System.Drawing.Point(216, 121);
+            this.cboMonth.Name = "cboMonth";
+            this.cboMonth.Size = new System.Drawing.Size(112, 20);
+            this.cboMonth.TabIndex = 2;
+            this.cboMonth.SelectedIndexChanged += new System.EventHandler(this.cboMonth_SelectedIndexChanged);
+            // 
+            // cboDay
+            // 
+            this.cboDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDay.FormattingEnabled = true;
+            this.cboDay.Location = new System.Drawing.Point(376, 121);
+            this.cboDay.Name = "cboDay";
+            this.cboDay.Size = new System.Drawing.Size(112, 20);
+            this.cboDay.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 635);
-            this.Controls.Add(this.btnAccess);
-            this.Controls.Add(this.txtURL);
-            this.Controls.Add(this.wbrower);
+            this.Controls.Add(this.cboDay);
+            this.Controls.Add(this.cboMonth);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.cboYear);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser wbrower;
-        private System.Windows.Forms.TextBox txtURL;
-        private System.Windows.Forms.Button btnAccess;
+        private System.Windows.Forms.ComboBox cboYear;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ComboBox cboMonth;
+        private System.Windows.Forms.ComboBox cboDay;
     }
 }
 
