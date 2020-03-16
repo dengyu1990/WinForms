@@ -29,7 +29,7 @@ namespace WinForms
         private void lstPic_SelectedIndexChanged(object sender, EventArgs e)
         {
             picbDisplay.SizeMode = PictureBoxSizeMode.Zoom;
-            //picbDisplay.Image = Image.FromFile(lstPic.SelectedItem.ToString());
+            //picbDisplay.Image = Image.FromFile(lstPic.SelectedItem.ToString(); //好垃圾的微软鼠标鸭~鼠标左键失灵
             SoundPlayer sp = new SoundPlayer(lstPic.SelectedItem.ToString());
             sp.Play();
         }
