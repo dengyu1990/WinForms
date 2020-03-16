@@ -28,49 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstPic = new System.Windows.Forms.ListBox();
-            this.picbDisplay = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picbDisplay)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.txtContent = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lstPic
+            // btnOpen
             // 
-            this.lstPic.FormattingEnabled = true;
-            this.lstPic.ItemHeight = 12;
-            this.lstPic.Location = new System.Drawing.Point(12, 12);
-            this.lstPic.Name = "lstPic";
-            this.lstPic.Size = new System.Drawing.Size(252, 472);
-            this.lstPic.TabIndex = 0;
-            this.lstPic.SelectedIndexChanged += new System.EventHandler(this.lstPic_SelectedIndexChanged);
+            this.btnOpen.Location = new System.Drawing.Point(12, 21);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.TabIndex = 1;
+            this.btnOpen.Text = "打开";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
-            // picbDisplay
+            // txtContent
             // 
-            this.picbDisplay.Location = new System.Drawing.Point(281, 12);
-            this.picbDisplay.Name = "picbDisplay";
-            this.picbDisplay.Size = new System.Drawing.Size(639, 472);
-            this.picbDisplay.TabIndex = 1;
-            this.picbDisplay.TabStop = false;
+            this.txtContent.Location = new System.Drawing.Point(12, 50);
+            this.txtContent.Multiline = true;
+            this.txtContent.Name = "txtContent";
+            this.txtContent.Size = new System.Drawing.Size(859, 304);
+            this.txtContent.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 501);
-            this.Controls.Add(this.picbDisplay);
-            this.Controls.Add(this.lstPic);
+            this.ClientSize = new System.Drawing.Size(893, 366);
+            this.Controls.Add(this.txtContent);
+            this.Controls.Add(this.btnOpen);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picbDisplay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
-
+            this.PerformLayout();
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lstPic;
-        private System.Windows.Forms.PictureBox picbDisplay;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.TextBox txtContent;
     }
 }
 

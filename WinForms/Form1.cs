@@ -22,16 +22,25 @@ namespace WinForms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string[] paths = Directory.GetFiles(@"C:\Users\Administrator\Desktop\WAV");
-            lstPic.Items.AddRange(paths);
+            
         }
 
-        private void lstPic_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnOpen_Click(object sender, EventArgs e)
         {
-            picbDisplay.SizeMode = PictureBoxSizeMode.Zoom;
-            //picbDisplay.Image = Image.FromFile(lstPic.SelectedItem.ToString(); //好垃圾的微软鼠标鸭~鼠标左键失灵
-            SoundPlayer sp = new SoundPlayer(lstPic.SelectedItem.ToString());
-            sp.Play();
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "要打开的文本文件哦~";
+            ofd.Multiselect = true; //可以多选
+            ofd.InitialDirectory = @"C:\Users\Administrator\Desktop";
+            ofd.Filter = "文本文件|*.txt";
+            ofd.ShowDialog();
+
+            //获得打开对话框中选中文件的路径
+            string line;
+            StreamReader sr = new StreamReader(ofd.FileName);
+            while ((line = sr.ReadLine()) != null)
+            {
+                txtContent.AppendText(line);
+            }
         }
     }
 }
